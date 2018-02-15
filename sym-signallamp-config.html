@@ -1,0 +1,35 @@
+<div class="c-side-pane t-toolbar">
+	<span style="color:#fff; margin-left:15px">Show Options</span>
+</div>
+<div  class="c-config-content">
+  <span style="margin-left:62px">Current Limit:</span>
+	{{config.LimitValue}}
+</div>
+<button ng-click="config.SetGreaterLess()"
+tabindex="-1" 
+class="c-primary-button" style="margin-left: 90px;"
+ >Value  {{config.GreaterLessText}}  Limit</button>
+ <div>
+<span style="margin-left:12px"
+ ng-show="config.GreaterThanLimit"><img src="Scripts/app/editor/symbols/ext/Icons/Good_State.gif"/></span>
+<span style="margin-left:12px"
+ ng-show="config.LessThanLimit"><img src="Scripts/app/editor/symbols/ext/Icons/Bad_State.gif"/></span>
+	<svg height="10" width="150">
+  <line x1="10" y1="-10" x2="150" y2="-10" style="stroke:black;stroke-width:2" />
+</svg>
+	
+	<span style="margin-left:12px"
+ ng-show="config.GreaterThanLimit"><img src="Scripts/app/editor/symbols/ext/Icons/Bad_State.gif"/></span>
+<span style="margin-left:12px"
+ ng-show="config.LessThanLimit"><img src="Scripts/app/editor/symbols/ext/Icons/Good_State.gif"/></span>
+ </div>
+<div class="c-config-input">
+    <span style="margin-left:12px">Enter Limit:</span>
+    <input type="number" name="EnterLimit" id ="EnterLimit" ng-style="{'width':'250px', 'height':'25px'}" />
+<button ng-click="config.SetLimit()"
+tabindex="-1" 
+class="c-primary-button" style="margin-left: 10px;"
+ >Set</button>
+</div>
+
+	
